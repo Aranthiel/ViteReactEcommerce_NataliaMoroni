@@ -1,0 +1,13 @@
+desde consola cmd, psoicionarse en la carpeta donde queremos crear el proyecto
+ejecutar npm create vite@latest
+definir el nombre del proyecto
+elegir React
+elegir JavaScript
+cd carpeta del proyecto
+npm i
+LISTO! el proyecto esta creado
+ahora se puede instalar bootstrap o la libreria que se quiera implementar
+
+los archivos no son con extencion .js  sino jsx
+
+para correr la aplicacion: npm run dev
