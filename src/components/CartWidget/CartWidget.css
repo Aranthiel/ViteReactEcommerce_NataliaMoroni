@@ -1,5 +1,7 @@
 .shopBasket{
-    color: var(--color-text);
+    color: var(--color-text);    
+    display: flex;
+    justify-content: flex-end;
 }
 
 .basketIcon{

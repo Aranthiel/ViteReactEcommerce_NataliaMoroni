@@ -82,7 +82,7 @@ const NavbarProyecto = () => {
           </Nav>
           {/* <NavbarText>Simple Text</NavbarText> */}
         </Collapse>
-        <CartWidget/>
+        <CartWidget className="cartWidget"/>
       </Navbar>
       
     </div>

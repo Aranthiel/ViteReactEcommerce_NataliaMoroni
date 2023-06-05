@@ -1,14 +1,52 @@
+.container{
+    max-width: none;
+    padding:0;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    border: 0;
+    position: relative;
+}
+.navbar{
+    width: 100vw;
+}
+.navbar>.container-fluid{
+    display: grid;
+    grid-template-areas:
+        "nav-left nav-center nav-right";
+    grid-template-columns: 16.2rem minmax(34rem, 110rem) 16.2rem;    
+    -webkit-column-gap: 2.4rem;
+    -moz-column-gap: 2.4rem;
+    column-gap: 2.4rem;
+    grid-column-gap: 2.4rem;
+    row-gap: 1.2rem;
+    grid-row-gap: 1.2rem;
+    padding: 0.8rem 10rem 1.2rem 10rem;
+}
 .brand-fs{
     font-size: 1.95rem;
+    grid-area: nav-left;
+    text-align: start;
 }
 .brandLogo {
     height: 5rem;
+    
+}
+.me-auto{
+    grid-area: nav-center;
 }
 .dropdown-menu{
     background-color: var(--color-intermedio); 
     font-size: 1.3rem;   
 }
+.className{
+    grid-area: nav-rigth;
+}
 @media screen and (max-width: 991px){
+    .navbar>.container-fluid{
+        display: flex;
+    }
     .navbar-toggler{
         order:-1;
     }
