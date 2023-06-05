@@ -11,3 +11,7 @@ ahora se puede instalar bootstrap o la libreria que se quiera implementar
 los archivos no son con extencion .js  sino jsx
 
 para correr la aplicacion: npm run dev
+
+
+¿por que a veces usa la doble llave {{}} ??
+Con la primer llave indicas que vas a usar JS dentro jsx, con la segundas llaves indicas que vas a pasar un objeto

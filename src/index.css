@@ -1,25 +1,44 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family:'Yanone Kaffeesatz', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  color: rgba(217, 234, 229, 0.87); 
   
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  /*paleta de colores*/
+  --color-principal: #20c997;
+  --primer-complementario: #206550;
+  --segundo-complementario: #0b4936;
+  --tercer-complementario: #313938;
+  --color-oscuro: #212529;
+  --color-intermedio: #5c5f5e;
+  --color-claro: #d9eae5;
+  --resaltador: #b6e0b3;
+  --color-text: rgba(217, 234, 229, 0.87);  
+  --color-shadow: 0 0 0 0.25rem rgba(50, 66, 61, 0.3);
+  --tamanio-fuente: 1.5rem;
+}
+*{
+  box-sizing: border-box; /* calcula automaticamente paRA QUE NO HAYA SCROLL HORIZONTAL*/
+  padding:0;
+  margin: 0;
 }
 
-
+html{
+  font-size: 65.5%;
+  /* esta linea indica que un REM es igual a 10px* lo que nos permite usar el rem como unidad de medida estandar para todo el proyecto */
+}
+/*AGREGAR ESTA PARTE Al inicio de  TODOS LOS ARCHIVOS CSS*/
+/* usar rem como unidad de edida para las dimensiones no spermite tener un mejor control del tamaño*/
 
 body {
   margin: 0;
-  /* display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh; */
-
+  font-size: 1.8rem;
 }

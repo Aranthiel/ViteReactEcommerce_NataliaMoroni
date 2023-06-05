@@ -1,6 +1,45 @@
-.canastoCompras{
-    color: rgb(248,249,250);
+.shopBasket{
+    color: var(--color-text);
 }
-.contadorProductos{
-    color: #20c997;
+
+.basketIcon{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-decoration: none;
+    cursor: pointer;
+    width: 2.5rem;
+    height: 2.5rem;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: visible;
+    color: var(--color-text);
+}
+.hiddenInfo{
+    position: absolute;
+    z-index: -1;
+    border: 0;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    margin: 0 -1px -1px 0;
+    overflow: hidden;
+    padding: 0;
+    display: block;
+}
+.basketCounter{
+display: inline-block;
+line-height: 15px;
+color: var(--color-oscuro) ;
+position: absolute;
+font-size: 1.025rem;
+font-weight: bold;
+top: 1.8rem;
+left: 1.3rem;
+width: 1.5rem;
+text-align: center;
+background-color: var(--color-principal);
+border-radius: 50%;
 }
