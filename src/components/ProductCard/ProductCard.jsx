@@ -13,7 +13,7 @@ import {
 // estilos
 import "./ProductCard.css"
 
-const ProductCard = () => {
+const ProductCard = (   ) => {
 
   return (
     <Card style={{ width: "18rem" }}>
