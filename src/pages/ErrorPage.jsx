@@ -11,7 +11,8 @@ function ErrorPage() {
     
     return (
         <div >
-            Error page
+            Ups! parece que la pagina que buscas no esta disponible!!!!
+            NO te preocupes! enseguiida te llevamos de nuevo a la página principal!
         </div>
     );
 }

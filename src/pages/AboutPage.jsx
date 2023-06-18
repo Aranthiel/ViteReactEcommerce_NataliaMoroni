@@ -1,7 +1,7 @@
 function AboutPage() {
     return (
         <div >
-            About page
+            Página en contrucción , regresa otro dìa!
         </div>
     );
 }
