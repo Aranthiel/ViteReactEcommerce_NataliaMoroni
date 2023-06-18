@@ -1,9 +1,9 @@
 import React, {useEffect, useState}from 'react';
 //imports librerias extrernas
+import { Link } from 'react-router-dom';
 //imports propios
 import "./ItemList.css"
 import ProductCard from "../ProductCard/ProductCard";
-import ItemDetail from "../ItemDetail/ItemDetail"
 
 
 //const API_URL = "https://rickandmortyapi.com/api/character";
@@ -26,10 +26,11 @@ const ItemList = () => {
         <div className="cards-list margin05rem">
             <h1>List Users</h1>
             {products.map((producto)=>{                
-                return (
-                <div className="margin05rem" key={producto.id}>
-                    <ItemDetail item={producto} className="heigt40rem"/>
-                </div>)
+                
+return (
+    <Link className="margin05rem" key={producto.id} to={`item/${producto.id}`}>
+        <ProductCard item={producto} className="heigt40rem"/>
+    </Link>)
             })}
         </div>
     )

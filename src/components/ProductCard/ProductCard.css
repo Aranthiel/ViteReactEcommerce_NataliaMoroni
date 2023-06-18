@@ -1,0 +1,9 @@
+.imgTarjeta{
+    height: 15rem;
+    object-fit: contain;
+    width: 100%;
+}
+.h40rem{
+    width: 25rem;
+    height: 35rem;
+}

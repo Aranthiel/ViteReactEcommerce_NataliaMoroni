@@ -11,6 +11,7 @@ import HomePage from './pages/HomePage';
 import ContactPage from './pages/ContactPage';
 import AboutPage from './pages/AboutPage';
 import ErrorPage from './pages/ErrorPage';
+import DetailPage from './pages/DetailPage'
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
             <Route path="/"  element={<HomePage />} />
             <Route path="/About"  element={<AboutPage />} />
             <Route path="/Contact"  element={<ContactPage />} />
+            <Route path="/item/:id"  element={<DetailPage />} />
             <Route path="*"  element={<ErrorPage />} />
           </Routes>
           <Footer />

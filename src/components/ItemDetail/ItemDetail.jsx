@@ -1,13 +1,14 @@
 //ItemQuantitySelector  Description  AddItemButton
 
 import React from 'react';
+import { useState } from 'react';
 //imports de terceros
 import {
-  Card,
-  CardBody,
-  CardTitle,
-  CardSubtitle,
-  CardText,
+  Carousel,
+  CarouselItem,
+  CarouselControl,
+  CarouselIndicators,
+  CarouselCaption,
   Button
 } from 'reactstrap';
 
@@ -15,22 +16,24 @@ import {
 // estilos
 import "./ItemDetail.css"
 
-const ItemDetail = ({item}) => {
-  console.log("producto en ItemLIst" , item.id, "|", item.title, "|", item.thumbnail)
+const ItemDetail = ({producto}) => {
+  console.log("producto en ItemLIst" , producto.id, "|", producto.title, "|", producto.thumbnail)
+  const fotos = producto.images;
+  console.log("fotos", fotos);
   return (
-    <Card className="h40rem">
-      <img alt={item.title} src={item.thumbnail} className="imgTarjeta" />
-      <CardBody>
-        <CardTitle tag="h5">{item.title}</CardTitle>
-        <CardSubtitle className="mb-2 text-muted" tag="h6">
-          {item.brand}
-        </CardSubtitle>
-        <CardText>
-          {item.description}
-        </CardText>
+    <div style={{display:"flex", width:"80%"}}>
+      <div className="carrusel">
+        <img src={producto.thumbnail} alt={producto.title} />
+      </div>
+      <div className="detalleProducto" style={{padding:"1.5rem"}}>
+        <h3>{producto.title}</h3>
+        <p> Marca: {producto.brand} </p>
+        <p>Descripción:{producto.description}</p> 
+        <p> Precio: {producto.price} </p>
         <Button>Comprar</Button>
-      </CardBody>
-    </Card>
+      
+      </div>
+    </div>
   );
 };
 

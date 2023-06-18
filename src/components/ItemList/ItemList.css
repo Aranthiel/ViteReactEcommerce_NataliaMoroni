@@ -1,11 +1,12 @@
 .cards-list {
     display:grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
 }
 .margin05rem {
     margin:0.5rem ;
+    text-decoration: none;
     
 }
 .heigt40rem{
-    height: 40rem;
+    height: 30rem;
 }
