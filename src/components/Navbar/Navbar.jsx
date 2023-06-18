@@ -17,6 +17,7 @@ import {
   DropdownItem,
   // NavbarText,
 } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 //imports propios
 // estilos
@@ -53,7 +54,7 @@ const NavbarProyecto = () => {
   return (
 
     <div className="container">
-      <Navbar className="navbar navbar-expand-lg bg-dark" dark full fixed /*{...args*}*/>
+      <Navbar className="navbar navbar-expand-lg bg-dark" dark   /*{...args*}*/>
         <NavbarBrand className="navbar-brand brand-fs" href="/">
           <img src={Logo} alt="Logo Tienda Faux" className="brandLogo" />
         </NavbarBrand>
@@ -61,7 +62,7 @@ const NavbarProyecto = () => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="me-auto" navbar>
             <NavItem>
-              <NavLink href="/components/">Ropa</NavLink>
+              <NavLink href="/About/">About</NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="https://github.com/reactstrap/reactstrap">
@@ -72,13 +73,16 @@ const NavbarProyecto = () => {
               <DropdownToggle nav caret>
                 Joyas
               </DropdownToggle>
-              <DropdownMenu right> 
+              <DropdownMenu end> 
                 <DropdownItem>Option 1</DropdownItem>
                 <DropdownItem>Option 2</DropdownItem>
                 <DropdownItem divider />
                 <DropdownItem>Reset</DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
+            <NavItem>
+              <NavLink href="/Contact/">Contact</NavLink>
+            </NavItem>
           </Nav>
           {/* <NavbarText>Simple Text</NavbarText> */}
         </Collapse>

@@ -1,21 +1,33 @@
 import './App.css';
 import '../node_modules/bootstrap/dist/js/bootstrap.min.js';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 //components
 import Navbar from './components/Navbar/Navbar';
-import ProductCard from './components/ProductCard/ProductCard';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import Footer from './components/Footer/Footer';
+
+//pages
+import HomePage from './pages/HomePage';
+import ContactPage from './pages/ContactPage';
+import AboutPage from './pages/AboutPage';
+import ErrorPage from './pages/ErrorPage';
+
 
 function App() {
   return (
-    <div className="App">
-      <Navbar/>
-      <ItemListContainer greeting="Proyecto Ecommerce creado con VITE - Mensaje pasado por Prop: Requerimiento de CoderHouse"/>
-      <ProductCard/>
-      <Footer/>
-    </div>
+    
+      <Router>
+        <div className="App">
+          <Navbar />    
+          <Routes>
+            <Route path="/"  element={<HomePage />} />
+            <Route path="/About"  element={<AboutPage />} />
+            <Route path="/Contact"  element={<ContactPage />} />
+            <Route path="*"  element={<ErrorPage />} />
+          </Routes>
+          <Footer />
+        </div>      
+      </Router>
   );
 }
 

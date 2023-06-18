@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+//imports librerias extrernas
+//imports propios
 import './ItemListContainer.css'
 
 const ItemListContainer = ({ greeting }) => {

@@ -1,0 +1,13 @@
+.container{
+    max-width: none;
+    padding:0;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    border: 0;
+    position: relative;
+}
+footer {
+    width: 100vw;
+}
