@@ -17,7 +17,6 @@ import {
 import "./ItemDetail.css"
 
 const ItemDetail = ({producto}) => {
-  console.log("producto en ItemLIst" , producto.id, "|", producto.title, "|", producto.thumbnail)
   const fotos = producto.images;
   console.log("fotos", fotos);
   return (

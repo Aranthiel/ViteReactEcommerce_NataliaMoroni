@@ -9,28 +9,18 @@ import ProductCard from "../ProductCard/ProductCard";
 //const API_URL = "https://rickandmortyapi.com/api/character";
 const API_URL = "https://dummyjson.com/products";
 
-const ItemList = () => {
-    //const [personajes, setPersonajes]= useState([]);
+const ItemList = (categoryId) => { 
     const [products, setProducts]= useState([]);
-    //console.log("personajes antes fetch", personajes);
-    console.log("products antes fetch", products);
     useEffect(()=> {
         fetch(API_URL)
         .then(response => response.json())
-      //  .then(json => setPersonajes(json.results))
         .then(json => setProducts(json.products))
-    }, [])
-    //console.log("personajes despues fetch", personajes);
-    console.log("products despues fetch", products);
+    }, [categoryId]);
+    
     return (
         <div className="cards-list margin05rem">
-            <h1>List Users</h1>
-            {products.map((producto)=>{                
-                
-return (
-    <Link className="margin05rem" key={producto.id} to={`item/${producto.id}`}>
-        <ProductCard item={producto} className="heigt40rem"/>
-    </Link>)
+            {products.map((producto)=>{ 
+                return (<ProductCard key={producto.id} item={producto} className="heigt40rem"/>)
             })}
         </div>
     )

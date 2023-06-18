@@ -14,7 +14,6 @@ import {
 import "./ProductCard.css"
 
 const ProductCard = ({item}) => {
-  console.log("producto en ItemLIst" , item.id, "|", item.title, "|", item.thumbnail)
   return (
     <Card className="h40rem">
       <img alt={item.title} src={item.thumbnail} className="imgTarjeta" />
@@ -24,7 +23,10 @@ const ProductCard = ({item}) => {
           {item.brand}
         </CardSubtitle>
         <CardText>
-          {item.description}
+          ${item.price}
+        </CardText>
+        <CardText>
+          Más info
         </CardText>
       </CardBody>
     </Card>

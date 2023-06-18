@@ -39,9 +39,14 @@
 .dropdown-menu{
     background-color: var(--color-intermedio); 
     font-size: 1.3rem;   
+    
 }
 .className{
     grid-area: nav-rigth;
+}
+a{
+    text-decoration: none;
+    
 }
 @media screen and (max-width: 991px){
     .navbar>.container-fluid{

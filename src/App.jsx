@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 //components
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+
 
 //pages
 import HomePage from './pages/HomePage';
@@ -22,6 +24,7 @@ function App() {
           <Navbar />    
           <Routes>
             <Route path="/"  element={<HomePage />} />
+            <Route path="/category/:categoryId"  element={<ItemListContainer />} />
             <Route path="/About"  element={<AboutPage />} />
             <Route path="/Contact"  element={<ContactPage />} />
             <Route path="/item/:id"  element={<DetailPage />} />
