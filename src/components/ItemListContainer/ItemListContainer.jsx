@@ -7,7 +7,6 @@ import ItemList from '../ItemList/ItemList';
 
 const ItemListContainer = ({ greeting }) => {
     let {categoryId}=useParams();
-    console.log(categoryId);
     return (
         <div>
             <p>{greeting}</p>

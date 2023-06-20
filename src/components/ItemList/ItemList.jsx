@@ -11,7 +11,7 @@ const API_URL = "https://dummyjson.com/products";
 
 const ItemList = (categoryId) => { 
     const [products, setProducts]= useState([]);
-    console.log("categoryId", categoryId)
+    
     
     useEffect(()=> {
         fetch(API_URL)
@@ -21,15 +21,20 @@ const ItemList = (categoryId) => {
             console.error('Error fetching products:', error);
         });
     }, []);
-    console.log("products", products);
-    const fitrados = products.filter(producto => producto.category === categoryId.value);    
-    console.log("fitrados", fitrados) //¿por que esto no funciona?
-    const filteredProducts = products.filter(producto => producto.category === 'smartphones');
-    console.log("filteredProducts", filteredProducts) ; // y esto si?
+    console.log("categoryId",categoryId)
+    if (categoryId.category !== undefined){
+        console.log("categoryId tiene valor y deberian renderizarse SOLAMENTE los  productos de la categoria")
+        
+    } else {
+        console.log("categoryId NO  tiene valor y deberian renderizarse TODOS los productos")
+    }
+    const filtrados = products.filter(producto => producto.category === categoryId.category);  
+    console.log("products",products)
+    console.log("filtrados", filtrados)
 
     return (
         <div className="cards-list margin05rem">
-            {products.map((producto)=>{ 
+            {filtrados.map((producto)=>{ 
                 return (<ProductCard key={producto.id} item={producto} className="heigt40rem"/>)
             })}
         </div>
