@@ -22,19 +22,25 @@ const ItemList = (categoryId) => {
         });
     }, []);
     console.log("categoryId",categoryId)
-    if (categoryId.category !== undefined){
-        console.log("categoryId tiene valor y deberian renderizarse SOLAMENTE los  productos de la categoria")
-        
-    } else {
-        console.log("categoryId NO  tiene valor y deberian renderizarse TODOS los productos")
-    }
+    
     const filtrados = products.filter(producto => producto.category === categoryId.category);  
     console.log("products",products)
     console.log("filtrados", filtrados)
+    let iaestoyharta=[];
+
+    if (categoryId.category !== undefined){
+        console.log("categoryId tiene valor y deberian renderizarse SOLAMENTE los  productos de la categoria");
+        iaestoyharta=[].concat(filtrados)
+        
+    } else {
+        console.log("categoryId NO  tiene valor y deberian renderizarse TODOS los productos");
+        iaestoyharta=[].concat(products)
+    }
+    console.log("iaestoyharta", iaestoyharta)
 
     return (
         <div className="cards-list margin05rem">
-            {filtrados.map((producto)=>{ 
+            {iaestoyharta.map((producto)=>{ 
                 return (<ProductCard key={producto.id} item={producto} className="heigt40rem"/>)
             })}
         </div>
