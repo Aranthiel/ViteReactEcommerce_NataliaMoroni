@@ -1,28 +1,30 @@
-import React, {useEffect, useState}from 'react';
+import {useEffect, useState, useContext}from 'react';
 //imports librerias extrernas
 import {  useParams} from 'react-router-dom';
 //imports propios
 import ItemDetail from "../components/ItemDetail/ItemDetail"
+import { ItemsContext } from '../context/ItemsContext';
 
 
-//const API_URL = `https://dummyjson.com/products/${id}`;
 
 const DetailPage = () => { 
+    const {items} = useContext(ItemsContext);
     const [product, setProduct]= useState({});
     let {id}=useParams();
 
-    console.log(" DetailPage product antes fetch", product);
+    
     useEffect(()=> {
-        fetch(`https://dummyjson.com/products/${id}`)
-        .then(response => response.json())
-        .then(json => setProduct(json))
-    }, [id])
-    console.log(" DetailPage product despues fetch", product);
-
-     
+        const foundProduct = items.find((item) => item.id.toString() === id);
+        if (foundProduct) {
+            setProduct(foundProduct);
+        }
+    }, [items, id]);
+    
     return (
         <div style={{display:"flex", justifyContent:"center", margin:"1rem"}}>
-            {product.id ? <ItemDetail producto={product} className="heigt40rem"/>:null}
+            {Object.keys(product).length > 0 ? (
+                <ItemDetail producto={product} className="heigt40rem" />
+            ) : null}
         </div>
     )
 

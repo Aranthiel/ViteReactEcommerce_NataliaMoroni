@@ -10,8 +10,6 @@ import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 library.add(fab, faCheckSquare, faCoffee)
 
-
-
 //components
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
@@ -23,15 +21,19 @@ import HomePage from './pages/HomePage';
 import ContactPage from './pages/ContactPage';
 import AboutPage from './pages/AboutPage';
 import ErrorPage from './pages/ErrorPage';
-import DetailPage from './pages/DetailPage'
+import DetailPage from './pages/DetailPage';
+
+//context
+import { ItemsProvider } from './context/ItemsContext';
+import { CartProvider } from './context/CartCotext';
 
 
 function App() {
-  return (
-    
-      <Router>
+  return (    
+      <ItemsProvider><CartProvider>
+        <Router>
         <div className="App">
-          <Navbar />
+         <Navbar /> 
           <SearchProducts />
           <Routes>
             <Route path="/"  element={<HomePage />} />
@@ -44,6 +46,7 @@ function App() {
           <Footer />
         </div>      
       </Router>
+      </CartProvider></ItemsProvider>
   );
 }
 

@@ -10,9 +10,7 @@ const ItemDetailContainer  = () => {
   let {id}=useParams()
   return (
     <div>
-      ItemDetailContainer 
       <ItemDetail item={id}/>
-
     </div>
   )
 }

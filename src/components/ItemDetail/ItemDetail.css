@@ -1,0 +1,25 @@
+.carousel-image {
+    max-width: 25rem;
+    max-height: 35rem;
+    min-height: 35rem;
+    height: auto;
+    object-fit: contain;
+    margin:auto 2.5rem;
+}
+
+.item-detail-container {
+    display: flex;
+    width: 80%;
+    height: 400px; /* Establece una altura fija para el contenedor principal */
+  }
+  
+  .carrusel {
+    flex: 1; /* El carrusel ocupará el espacio restante */
+  }
+  
+  .detalleProducto {
+    flex: 1;
+    padding: 1.5rem;
+    height: 100%; /* Establece una altura del 100% para que coincida con la altura del contenedor principal */
+    overflow: auto; /* Agrega desplazamiento si el contenido supera la altura del contenedor */
+  }

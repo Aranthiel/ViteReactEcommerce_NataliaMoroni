@@ -16,9 +16,7 @@ import { Link } from 'react-router-dom';
 import "./ProductCard.css"
 
 const ProductCard = ({item}) => {
-  const verDetalle = (event)=>{
-
-  }
+ 
   return (
     <Link to={`item/${item.id}`}>
       <Card className="h40rem">

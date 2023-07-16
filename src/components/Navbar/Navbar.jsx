@@ -1,6 +1,6 @@
 //rafce tab >> comando  snipet de  ES7 react native snipet >> react arrow function export component
 // imports de react
-import React, { useState, useEffect }  from 'react';
+import { useState, useEffect }  from 'react';
 
 //imports de terceros
 import {
