@@ -29,7 +29,7 @@ const ItemDetail = ({producto}) => {
         <p> Marca: {producto.brand} </p>
         <p>Descripción:{producto.description}</p> 
         <p> Precio: {producto.price} </p>
-        <Button>Comprar</Button>
+        <Button>reservar</Button>
       
       </div>
     </div>

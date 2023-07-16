@@ -1,0 +1,16 @@
+.barraBusqueda{
+    width: 75%;
+    height: 3rem;
+    margin: 1rem auto;    
+}
+.btnBuscar{
+    background-color: var(--color-principal);
+    width: 15rem;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+Input{
+    color: var(--color-intermedio);
+    font-style: italic;
+    font-size: 2.5rem;
+}

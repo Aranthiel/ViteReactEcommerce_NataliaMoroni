@@ -13,28 +13,28 @@ const Footer = () => {
         <div className="container p-4 pb-0">
             {/* Section: Social mediLink */}
             <section className="mb-4">
-                <Link className="btn btn-outline-light btn-floating m-1" to="www.Facebook.com" >
-                  i
+                <Link className="btn btn-dark display-5 btn-floating m-1" to="www.Facebook.com" >
+                <FontAwesomeIcon icon="fa-brands fa-facebook-f" />
                 </Link>
 
-                <Link className="btn btn-outline-light btn-floating m-1" to="www.Twitter.com" >
-                  i
+                <Link className="btn btn-dark display-5 btn-floating m-1" to="www.Twitter.com" >
+                <FontAwesomeIcon icon="fa-brands fa-twitter" />
                 </Link>
 
-                <Link className="btn btn-outline-light btn-floating m-1" to="www.Google.com" >
-                  i
+                <Link className="btn btn-dark display-5 btn-floating m-1" to="www.Google.com" >
+                <FontAwesomeIcon icon="fa-brands fa-google" />
                 </Link>
 
-                <Link className="btn btn-outline-light btn-floating m-1" to="www.Instagram.com" >
-                  i
+                <Link className="btn btn-dark display-5 btn-floating m-1" to="www.Instagram.com" >
+                <FontAwesomeIcon icon="fa-brands fa-instagram" />
                 </Link>
 
-                <Link className="btn btn-outline-light btn-floating m-1" to="www.Linkedin.com" >
-                  i
+                <Link className="btn btn-dark display-5 btn-floating m-1" to="www.Linkedin.com" >
+                <FontAwesomeIcon icon="fa-brands fa-linkedin" />
                 </Link>
 
-                <Link className="btn btn-outline-light btn-floating m-1" to="www.Github.com">
-                  i
+                <Link className="btn btn-dark display-5 btn-floating m-1" to="www.Github.com">
+                <FontAwesomeIcon icon="fa-brands fa-github" size="lg" />
                 </Link>
                 
             </section>

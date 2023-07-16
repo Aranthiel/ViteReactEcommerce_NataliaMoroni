@@ -2,11 +2,21 @@ import './App.css';
 import '../node_modules/bootstrap/dist/js/bootstrap.min.js';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+//fontawesome
+import ReactDOM from 'react-dom'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons'
+
+library.add(fab, faCheckSquare, faCoffee)
+
+
+
 //components
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-
+import SearchProducts from './components/SearchProducts/SearchProducts';
 
 //pages
 import HomePage from './pages/HomePage';
@@ -21,7 +31,8 @@ function App() {
     
       <Router>
         <div className="App">
-          <Navbar />    
+          <Navbar />
+          <SearchProducts />
           <Routes>
             <Route path="/"  element={<HomePage />} />
             <Route path="/category/:categoryId"  element={<ItemListContainer />} />
