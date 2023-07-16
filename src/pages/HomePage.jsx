@@ -4,7 +4,7 @@ import ItemListContainer from '../components/ItemListContainer/ItemListContainer
 
 
 
-function HomePage() {
+const HomePage=()=> {
     return (
         <div >
             Home page

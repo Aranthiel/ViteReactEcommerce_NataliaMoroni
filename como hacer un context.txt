@@ -1,0 +1,15 @@
+1. dentro de la carpeta /src crear una carpeta context
+2. crear el archivo NombreContext.js
+3. rafce tab para general el formato basico de arrow function para NombreContex
+4. importar {createContext} from "react" y otros imports que sean necesarios
+5. luego del import exportar NombreContex  > export const NombreContext = createContext();
+6. crear  y exportar el Provider para usarlo como HOC (Height Order Component) >  export const NombreProvider = ({ **children }) => { funciones y variables para compartir con otros componentes; 
+7. return (NombreContext.Provider *value={{funciones, variables, para compartir con otros componentes,}}> {children} </CartContext.Provider> )} //Fin de NombreProvider
+8. Importar {NombreProvider} from "./context/rutaAlContext" en el componente de nivel superior que requiera el uso del Provider
+9. Envolver el componente usando <CartProvider> Cmponente de Nivel superior y subcomponentes </CartProvider>
+10.  Importar {useContext} from "react"  y {NombreContext} from "./context/rutaAlContext" en el componente que requiera los datos del contexto
+11. ver "cartWidget" para entender como usar los datos del contexto y cartDetailPAge para ver como implementar fuciones del contexto
+
+*value la prop que define cuales son los valores y funciones que se van a compartir si o si tiene el nombre value
+
+**children son aquellos componentes HIJOS de un HOC y que podran recibir los valores y funciones compartidas por ese context

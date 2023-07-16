@@ -1,19 +1,28 @@
 import { useState, useEffect, createContext } from "react";
 
-export const ItemsContext=createContext()
+export const ItemsContext = createContext();
 
-const API_URL = "https://dummyjson.com/products";
+export const ItemsProvider = ({ children }) => {
+  const [items, setItems] = useState([]);
 
+  useEffect(() => {
+    const fetchItems = async () => {
+      try {
+        const API_URL = "https://dummyjson.com/products";
+        const response = await fetch(API_URL);
+        const data = await response.json();
+        setItems(data.products);
+      } catch (error) {
+        console.log("Error al obtener los items:", error);
+      }
+    };
 
-// eslint-disable-next-line react/prop-types
-export const ItemsProvider = ({children}) =>{
-    const [items, setItems] = useState([]);
+    fetchItems();
+  }, []);
 
-    useEffect(() =>{
-        fetch(API_URL)
-        .then((response)=>response.json())
-        .then((data)=> setItems(data.products))
-        .catch((error)=>console.log(error));
-    }, [])
-    return (<ItemsContext.Provider value={{items}}>{children}</ItemsContext.Provider>)
-}
+  return (
+    <ItemsContext.Provider value={{ items }}>
+      {children}
+    </ItemsContext.Provider>
+  );
+};

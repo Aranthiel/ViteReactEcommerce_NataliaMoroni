@@ -1,4 +1,4 @@
-function AboutPage() {
+const AboutPage = () =>{
     return (
         <div >
             Página en contrucción , regresa otro dìa!
