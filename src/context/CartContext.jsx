@@ -1,4 +1,7 @@
 import { createContext, useState, useEffect } from 'react';
+import { doc, setDoc } from 'firebase/firestore';
+import { db } from '../firebase/firebaseConfig'; // Importa la configuración de tu instancia de Firebase
+
 
 export const CartContext = createContext();
 
@@ -30,6 +33,20 @@ export const CartProvider = ({ children }) => {
         setCartItems([]);
     };
 
+    const saveToFirebase = async (email, customerName, total) => {
+        try {
+            const docRef = doc(db, 'orders', email);
+            await setDoc(docRef, {
+                customerName,
+                email,                
+                total,
+            });
+            console.log('Datos guardados en Firebase correctamente.');
+        } catch (error) {
+            console.error('Error al guardar los datos en Firebase:', error);
+        }
+    };
+
     return (
         <CartContext.Provider
             value={{
@@ -37,6 +54,7 @@ export const CartProvider = ({ children }) => {
                 addToCart,
                 removeFromCart,
                 clearCart,
+                saveToFirebase,
             }}
         >
             {children}

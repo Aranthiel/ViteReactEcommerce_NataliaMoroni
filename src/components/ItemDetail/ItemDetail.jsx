@@ -13,7 +13,7 @@ import {
 } from 'reactstrap';
 
 //imports propios
-import {CartContext} from "../../context/CartCotext";
+import {CartContext} from "../../context/CartContext";
 // estilos
 import "./ItemDetail.css"
 

@@ -10,9 +10,9 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 //fontawesome
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
-import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { faTrashCan } from '@fortawesome/free-solid-svg-icons'
 
-library.add(fab, faCheckSquare, faCoffee)
+library.add(fab, faTrashCan)
 
 //components
 import Navbar from './components/Navbar/Navbar';
@@ -25,12 +25,12 @@ import HomePage from './pages/HomePage';
 import ContactPage from './pages/ContactPage';
 import AboutPage from './pages/AboutPage';
 import ErrorPage from './pages/ErrorPage';
-import DetailPage from './pages/DetailPage';
-import CartDetailPage from './pages/CartDetailPage';
+import DetailPage from './pages/ProductDetailPage';
+import CartDetailPage from './pages/CartDetailPage/CartDetailPage';
 
 //context
-import { ItemsProvider } from './context/ItemsContext';
-import { CartProvider } from './context/CartCotext';
+import { ItemsProvider } from './context/ItemsContextFirebas';
+import { CartProvider } from './context/CartContext';
 
 
 function App() {

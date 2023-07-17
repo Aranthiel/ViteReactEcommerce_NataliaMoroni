@@ -1,6 +1,8 @@
 import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { CartContext } from '../context/CartCotext';
+import { CartContext } from '../../context/CartContext';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import "./CartDetailPage.css"
 
 const CartDetailPage = () => {
   const { cartItems, removeFromCart, clearCart } = useContext(CartContext);
@@ -37,13 +39,16 @@ const CartDetailPage = () => {
       {cartItems.length === 0 ? (
         <p>No hay productos en el carrito</p>
       ) : (
-        <ul>
+        <ul >
           {cartItems.map((item) => (
-            <li key={item.id}>
-              <div>
-                <h3>{item.title}</h3>
-                <p>Precio: {item.price}</p>
-                <button onClick={() => handleRemoveFromCart(item.id)}>Eliminar</button>
+            <li className="planeLi" key={item.id}>
+              <div className="flexUl">
+                <h3 className="nombre">{item.title}</h3>
+                <p className="precio">Precio: {item.price}</p>
+                <button className="btn btn-outline-secondary display-5 btn-floating m-1 btnEliminar" onClick={() => handleRemoveFromCart(item.id)}><FontAwesomeIcon icon="fa-trash-can" /></button>
+                
+                
+                
               </div>
             </li>
           ))}
@@ -51,14 +56,20 @@ const CartDetailPage = () => {
       )}
 
       {cartItems.length > 0 && (
-        <div>
-          <p>Total: ${calculateTotal()}</p>
-          <button onClick={handleClearCart}>Vaciar carrito</button>
-          <button onClick={handleFinalizePurchase}>Finalizar compra</button>
+        <div className="btnContainer"> 
+          <div className="finalizarCompra">
+            <h2>Total: ${calculateTotal()}</h2>
+            <button className="btnEliminar" onClick={handleFinalizePurchase}>Finalizar compra</button>
+          </div>
+          <div className="seguirVaciar">
+            <Link to="/"><button className="planeBtn"> Seguir Comprando</button></Link>
+            <button className="planeBtn" onClick={handleClearCart}>Vaciar carrito</button>
+            
+          </div>
         </div>
       )}
 
-      <Link to="/">Seguir comprando</Link>
+      
 
       {showModal && (
         <div className="modal">

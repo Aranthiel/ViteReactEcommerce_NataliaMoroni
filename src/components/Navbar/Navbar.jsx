@@ -62,13 +62,8 @@ const NavbarProyecto = () => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="me-auto" navbar>
             <NavItem>
-              <NavLink href="/About/">About</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">
-                Tecnología
-              </NavLink>
-            </NavItem>
+              <NavLink href="/About">About</NavLink>
+            </NavItem>            
             <UncontrolledDropdown nav inNavbar direction={compactScreen? "end":"down"}>
               <DropdownToggle nav caret>
                 Categorias
@@ -80,25 +75,11 @@ const NavbarProyecto = () => {
                 <Link to={`category/skincare`} > <DropdownItem>skincare</DropdownItem> </Link>
                 <Link to={`category/groceries`} > <DropdownItem>groceries</DropdownItem> </Link>
                 <Link to={`category/home-decoration`} > <DropdownItem>home-decoration</DropdownItem> </Link>
-                <Link to={`category/furniture`} > <DropdownItem>furniture</DropdownItem> </Link>
-                <Link to={`category/tops`} > <DropdownItem>tops</DropdownItem> </Link>
-                <Link to={`category/womens-dresses`} > <DropdownItem>womens-dresses</DropdownItem> </Link>
-                <Link to={`category/womens-shoes`} > <DropdownItem>womens-shoes</DropdownItem> </Link>
-                <Link to={`category/mens-shirts`} > <DropdownItem>mens-shirts</DropdownItem> </Link>
-                <Link to={`category/mens-shoes`} > <DropdownItem>mens-shoes</DropdownItem> </Link>
-                <Link to={`category/mens-watches`} > <DropdownItem>mens-watches</DropdownItem> </Link>
-                <Link to={`category/womens-watches`} > <DropdownItem>womens-watches</DropdownItem> </Link>
-                <Link to={`category/womens-bags`} > <DropdownItem>womens-bags</DropdownItem> </Link>
-                <Link to={`category/womens-jewellery`} > <DropdownItem>womens-jewellery</DropdownItem> </Link>
-                <Link to={`category/sunglasses`} > <DropdownItem>sunglasses</DropdownItem> </Link>
-                <Link to={`category/automotive`} > <DropdownItem>automotive</DropdownItem> </Link>
-                <Link to={`category/motorcycle`} > <DropdownItem>motorcycle</DropdownItem> </Link>
-                <Link to={`category/lighting`} > <DropdownItem>lighting</DropdownItem> </Link>
-                
+                <Link to={`/`} > <DropdownItem> All</DropdownItem> </Link>
               </DropdownMenu>
             </UncontrolledDropdown>
             <NavItem>
-              <NavLink href="/Contact/">Contact</NavLink>
+              <NavLink href="/Contact">Contact</NavLink>
             </NavItem>
           </Nav>
           {/* <NavbarText>Simple Text</NavbarText> */}

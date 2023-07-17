@@ -7,13 +7,16 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyB6e-Vqo6yuIHFauhIe9t2au0Ib21fa4YI",
-    authDomain: "reactvite-ecommerce-ch.firebaseapp.com",
-    projectId: "reactvite-ecommerce-ch",
-    storageBucket: "reactvite-ecommerce-ch.appspot.com",
-    messagingSenderId: "1025775302371",
-    appId: "1:1025775302371:web:98da59299fe09d780777d6"
+
+    apiKey: "AIzaSyBUIOiy6m-2KHg__JRjr5I3opME4YFvwYo",
+    authDomain: "ch-ecommerce-jsonexport.firebaseapp.com",
+    projectId: "ch-ecommerce-jsonexport",
+    storageBucket: "ch-ecommerce-jsonexport.appspot.com",
+    messagingSenderId: "114413142900",
+    appId: "1:114413142900:web:0e57fe85769b4ab40e6221"
+
 };
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);

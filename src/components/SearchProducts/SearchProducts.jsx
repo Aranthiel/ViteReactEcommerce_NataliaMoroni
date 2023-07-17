@@ -7,7 +7,7 @@ import {
     Button,
 } from 'reactstrap';
 //imports propios
-import { ItemsContext } from '../../context/ItemsContext';
+import { ItemsContext } from '../../context/ItemsContextFirebas';
 
 // estilos
 import "./SearchProducts.css"

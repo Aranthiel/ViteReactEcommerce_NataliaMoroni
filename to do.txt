@@ -1,11 +1,15 @@
-
-
 implementar firebase
+base de datos ITEMS que contiene el catálogo completo de productos, incluyendo el enlace para la foto, el precio unitario, la descripción y la categoría.
+base de datos "orders" que almacena las órdenes generadas, que incluyen los productos, sus descripciones, precios y la fecha de la compra.
 
-verificar todos aquellos componentes (itemDetail, SearchProducts) que utlizan el ID como referencia ya que el mismo no será mas numerico
-corregir para que la barra de busqueda traiga la info de todos los productos cuyo nombre, descripcion o categoria coincidan con la palabra buscada
 implementar Conditional Rendering (boton comprar enb la card de producto, donde si el item no esta en el carrito muestra comprar, pero si el item ya fue agregado, muestra la cantidad de items = que hay en el carrito con botones laterales para disminuir o aumentar la cantidad)
-el modal de finalizar la compra no funciona
+Al ingresar el nombre, apellido, teléfono y correo electrónico (verificado ingresándolo dos veces), se activa el botón "Realizar compra".
+
+- Al hacer clic en "Realizar compra", se guarda la orden en la base de datos, incluyendo todos los productos, la fecha y se muestra el número de orden.
+- Checkout (que muestra los detalles de compra, como los items con sus cantidades y el total de la orden, y solicita el nombre, apellido, teléfono y correo electrónico del comprador)
+- Brief (detalle de compra)
+
+
 cuando elimino un item del carrito se eliminan todos los que tienen el mismo ID
 cuando hago click en una card desde la vista por categorias  se rompe
 dar formato a la vista del carrito

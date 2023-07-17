@@ -3,16 +3,28 @@ import {useEffect, useState, useContext}from 'react';
 import {  useParams} from 'react-router-dom';
 //imports propios
 import ItemDetail from "../components/ItemDetail/ItemDetail"
-import { ItemsContext } from '../context/ItemsContext';
+import { ItemsContext } from '../context/ItemsContextFirebas';
 
 
 
-const DetailPage = () => { 
-    const {items} = useContext(ItemsContext);
+const ProductDetailPage = () => { 
+    const {items, getItemsByAttribute } = useContext(ItemsContext);
     const [product, setProduct]= useState({});
     let {id}=useParams();
 
+    useEffect(() => {
+        const fetchProduct = async () => {
+          const filteredItems = await getItemsByAttribute('id', id);
+          if (filteredItems.length > 0) {
+            console.log(filteredItems)
+            setProduct(filteredItems[0]);
+          }
+        };
     
+        fetchProduct();
+
+      }, [getItemsByAttribute, id]);
+
     useEffect(()=> {
         const foundProduct = items.find((item) => item.id.toString() === id);
         if (foundProduct) {
@@ -30,4 +42,4 @@ const DetailPage = () => {
 
 }
 
-export default DetailPage
+export default ProductDetailPage;

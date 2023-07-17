@@ -1,0 +1,64 @@
+.gridUl{
+    width: 70%;
+    margin:0 auto; 
+    display:grid;
+    grid-template-columns: 70% 15% 15%;   
+}
+.planeLi{
+    width: 70%;
+    list-style: none;
+    margin: 1.5rem auto;
+    border-bottom: 0.5px solid var(--color-intermedio);
+    
+}
+.flexUl{    
+    margin:0 auto;
+    display:flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.nombre{
+    width: 70%;
+    
+} 
+.precio{
+    width: 15%;
+    
+} 
+.eliminar{
+    width: 15%;
+    
+}
+.btnEliminar{
+    background-color: var(--color-principal);
+    color:  var(--color-claro);
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 0.5rem;
+    border: none;
+}
+.btnContainer{
+    
+    width: 80%;    
+    margin: 1.5rem auto;
+    padding:2.5rem;
+    border-bottom: 0.5px solid var(--color-intermedio);
+}
+.finalizarCompra{
+    width: 50%;
+    margin:2.5rem auto;
+    background-color: var(--color-claro);
+    padding:2.5rem;   
+    display:flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.seguirVaciar{
+    display:flex;
+    justify-content: space-between;
+}
+.planeBtn{
+    background-color: transparent;
+    border:none;
+    padding:2.5rem;
+}
