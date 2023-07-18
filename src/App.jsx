@@ -27,6 +27,7 @@ import AboutPage from './pages/AboutPage';
 import ErrorPage from './pages/ErrorPage';
 import DetailPage from './pages/ProductDetailPage';
 import CartDetailPage from './pages/CartDetailPage/CartDetailPage';
+import Checkout from "./components/Checkout/Checkout.jsx"
 
 //context
 import { ItemsProvider } from './context/ItemsContextFirebas';
@@ -47,6 +48,7 @@ function App() {
             <Route path="/Contact"  element={<ContactPage />} />
             <Route path="/item/:id"  element={<DetailPage />} />
             <Route path="/cart"  element={<CartDetailPage />} />
+            <Route path="/confirmar/:total"  element={<Checkout />} />
             <Route path="*"  element={<ErrorPage />} />
           </Routes>
           <Footer />

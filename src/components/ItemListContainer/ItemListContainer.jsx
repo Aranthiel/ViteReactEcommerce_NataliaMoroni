@@ -10,7 +10,7 @@ const ItemListContainer = ({ greeting }) => {
     return (
         <div>
             <p>{greeting}</p>
-            <ItemList category={categoryId}/>
+            <ItemList className="itemList" category={categoryId}/>
         </div>
     )
 }

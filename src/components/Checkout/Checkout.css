@@ -1,0 +1,31 @@
+.CheckoutForm{
+    max-width: 80rem;
+    height: 55rem;
+    width: 80%;
+    color:var(--color-principal);
+    background-color: var(--color-oscuro);
+    text-align: center;
+    margin:2.5rem auto;
+    padding:5rem
+}
+.logo{
+   
+}
+.resumen{
+    margin: 3rem;
+}
+#nombre, #exampleEmail{
+    height: 5rem;
+    width: 70%;
+    margin:2.5rem auto
+}
+.btnConfirmar{
+    background-color: var(--color-principal);
+    width: 15rem;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+}
+.alert {
+    margin-top: 1.5rem;
+}

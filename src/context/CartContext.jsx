@@ -19,6 +19,7 @@ export const CartProvider = ({ children }) => {
         saveCartToLocalStorage();
     }, [cartItems]);
 
+
     const addToCart = (item) => {
         setCartItems((prevCartItems) => [...prevCartItems, item]);
     };

@@ -4,10 +4,11 @@ import { CartContext } from '../../context/CartContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "./CartDetailPage.css"
 
+
 const CartDetailPage = () => {
   const { cartItems, removeFromCart, clearCart } = useContext(CartContext);
-  const [showModal, setShowModal] = useState(false);
-
+  let total = 0;
+ 
   const handleRemoveFromCart = (productId) => {
     removeFromCart(productId);
   };
@@ -16,16 +17,8 @@ const CartDetailPage = () => {
     clearCart();
   };
 
-  const handleFinalizePurchase = () => {
-    setShowModal(true);
-  };
-
-  const closeModal = () => {
-    setShowModal(false);
-  };
-
   const calculateTotal = () => {
-    const total = cartItems.reduce((accumulator, item) => {
+    total = cartItems.reduce((accumulator, item) => {
       return accumulator + item.price;
     }, 0);
 
@@ -59,7 +52,7 @@ const CartDetailPage = () => {
         <div className="btnContainer"> 
           <div className="finalizarCompra">
             <h2>Total: ${calculateTotal()}</h2>
-            <button className="btnEliminar" onClick={handleFinalizePurchase}>Finalizar compra</button>
+            <Link to={`/confirmar/${total}`} ><button className="btnEliminar">Finalizar compra</button></Link>
           </div>
           <div className="seguirVaciar">
             <Link to="/"><button className="planeBtn"> Seguir Comprando</button></Link>
@@ -70,15 +63,6 @@ const CartDetailPage = () => {
       )}
 
       
-
-      {showModal && (
-        <div className="modal">
-          <div className="modal-content">
-            <h2>Tu compra fue realizada con éxito</h2>
-            <button onClick={closeModal}>Cerrar</button>
-          </div>
-        </div>
-      )}
     </div>
   );
 };
