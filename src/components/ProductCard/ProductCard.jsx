@@ -19,17 +19,17 @@ const ProductCard = ({item}) => {
  
   return (
     <Link to={`item/${item.id}`}>
-      <Card className="h40rem">
-        <img alt={item.title} src={item.thumbnail} className="imgTarjeta" />
-        <CardBody>
-          <CardTitle tag="h2">{item.title}</CardTitle>
-          <CardSubtitle className="mb-2" tag="h6">
+      <Card className="pCard">
+        <img className="imgTarjeta" alt={item.title} src={item.thumbnail} />
+        <CardBody className="cBody">
+          <CardTitle className="cTitle" tag="h2">{item.title}</CardTitle>
+          <CardSubtitle className="mb-2 cSubtitle" tag="h6">
             {item.brand}
-          </CardSubtitle>
-          <CardText className=" priceTag" >
+          </CardSubtitle>          
+        </CardBody>
+        <CardText className=" cPrice" >
             ${item.price}
           </CardText>
-        </CardBody>
       </Card>
     </Link>
   );
