@@ -14,7 +14,7 @@
 .resumen{
     margin: 3rem;
 }
-#nombre, #exampleEmail{
+#customerNameInput, #emailInput {
     height: 5rem;
     width: 70%;
     margin:2.5rem auto

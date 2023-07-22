@@ -11,16 +11,25 @@ import Logo from "../../assets/FauxIsotipo.png"
 const initialState = {
   customerName: "",
   email: "",
+  precio:"",
 };
 const Checkout = ({}) => {
   const { clearCart } = useContext(CartContext);
   const [values, setValues] = useState(initialState);
   const [purchaseID, setPurchaseID] = useState("");
-  let {total}= useParams()
+  let {total}= useParams();
 
- 
+  const handleInputChange = (e)=>{
+    const {name, value} =e.target;
+    console.log(name, value )
+    console.log("values", values )
+    setValues({...values,[name]:value, precio:total})
+    console.log("n values", values )
+  };
+
   const onSubmit = async (e) => {
     e.preventDefault();
+    console.log(values);
     // Add a new document with a generated id.
     const docRef = await addDoc(collection(db, "orders"), {
       values,
@@ -38,13 +47,13 @@ const Checkout = ({}) => {
       <img src={Logo} alt="Logo Tienda Faux" className="logo" />
       <h2 className="resumen"> Estas a punto de confirmar tu compra en TIENDA FAUX por un total de ${total}</h2>
         <FormGroup>
-          <Label for="nombre" hidden > Nombre</Label> 
-          <Input id="nombre" name="nombre" placeholder="Nombre" type="text" />
+          <Label for="customerNameInput" hidden > Nombre</Label> 
+          <Input id="customerNameInput" name="customerName" placeholder="Nombre" type="text" onChange={handleInputChange}/>
         </FormGroup>
         {' '}
         <FormGroup>
-            <Label for="exampleEmail" hidden > Email </Label>
-            <Input id="exampleEmail" name="email" placeholder="Email" type="email" />
+            <Label for="emailInput" hidden > Email </Label>
+            <Input id="emailInput" name="email" placeholder="Email" type="email" onChange={handleInputChange}/>
         </FormGroup>
         {' '}
         <Button type="submit" className="btnConfirmar">Confirmar</Button>
