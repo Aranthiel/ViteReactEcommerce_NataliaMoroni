@@ -6,9 +6,8 @@ import ItemListContainer from '../components/ItemListContainer/ItemListContainer
 
 const HomePage=()=> {
     return (
-        <div >
-            Home page
-            <ItemListContainer greeting="Proyecto Ecommerce creado con VITE - Mensaje pasado por Prop: Requerimiento de CoderHouse" />
+        <div >            
+            <ItemListContainer greeting="Bienvenides a Tienda FAUX donde nungun producto es real" />
         </div>
     );
 }

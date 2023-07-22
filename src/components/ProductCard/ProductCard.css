@@ -1,10 +1,30 @@
-.imgTarjeta{
-    height: 15rem;
-    object-fit: contain;
-    width: 100%;
-}
+
 .h40rem{
     width: 25rem;
     height: 30rem;
-    margin:1.5rem auto;
+    margin:1.5rem auto;    
+    border: 0.5px solid var(--color-principal);
+    text-transform: capitalize;
+}
+
+.h40rem:hover{
+    transform: scale(1.05);
+    transition: 2.5s;
+    color: var(--color-claro);
+    background-color: var(--color-oscuro);
+    border:none;
+}
+
+
+.imgTarjeta{
+    height: 15rem;
+    object-fit: cover;
+    height: 15rem;
+    width: 90%;
+    margin:1.2rem auto;
+    border-radius:1.2rem;
+}
+.priceTag{
+    font-size: xx-large;
+    color:var(--color-principal);
 }

@@ -7,7 +7,7 @@ import "./Footer.css"
 
 const Footer = () => {
   return (
-    <div className="container my-5">
+    <div className="container ">
       <footer className="bg-dark text-center text-white">
         <div className="container p-4 pb-0">
             {/* Section: Social mediLink */}

@@ -61,10 +61,10 @@ const NavbarProyecto = () => {
         <NavbarToggler className="navbar-toggler" onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="me-auto" navbar>
-            <NavItem>
+            <NavItem className="nItem">
               <NavLink href="/About">About</NavLink>
             </NavItem>            
-            <UncontrolledDropdown nav inNavbar direction={compactScreen? "end":"down"}>
+            <UncontrolledDropdown  className="nItem"nav inNavbar direction={compactScreen? "end":"down"}>
               <DropdownToggle nav caret>
                 Categorias
               </DropdownToggle>
@@ -78,7 +78,7 @@ const NavbarProyecto = () => {
                 <Link to={`/`} > <DropdownItem> All</DropdownItem> </Link>
               </DropdownMenu>
             </UncontrolledDropdown>
-            <NavItem>
+            <NavItem className="nItem">
               <NavLink href="/Contact">Contact</NavLink>
             </NavItem>
           </Nav>

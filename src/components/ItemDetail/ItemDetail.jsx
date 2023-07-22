@@ -54,8 +54,13 @@ const ItemDetail = ({producto}) => {
 
 
   return (
-    <div className="item-detail-container">
-      <div className="carrusel">
+    <div className="detailContainer">
+      <div className='item-title-container'>
+        <h3 className="itemTitle">{producto.title}</h3>
+        <p className="itemBrand"> Marca: {producto.brand} </p>
+      </div>
+      <div className='item-detail-container '>
+        <div className="carrusel">
         <Carousel activeIndex={activeIndex} next={next} previous={previous}>
           <CarouselIndicators
             items={producto.images}
@@ -66,15 +71,14 @@ const ItemDetail = ({producto}) => {
           <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
           <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
         </Carousel>
+        </div>
+        <div className="detalleProducto">
+        <div className="descricionProducto"><p> {producto.description} </p></div>
+          <div className="precioProducto"><h2 style={{fontSize: "5rem"}}>${producto.price}</h2></div>
+          <div className="btnReservarContainer"><Button className="btnReservar"onClick={handleReservar}>Reservar</Button></div>
+        </div>
       </div>
-      <div className="detalleProducto" style={{padding:"1.5rem"}}>
-        <h3>{producto.title}</h3>
-        <p> Marca: {producto.brand} </p>
-        <p>Descripción:{producto.description}</p> 
-        <p> Precio: {producto.price} </p>
-        <Button onClick={handleReservar}>Reservar</Button>
-      
-      </div>
+
     </div>
   );
 };

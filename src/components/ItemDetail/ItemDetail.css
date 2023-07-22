@@ -1,25 +1,79 @@
-.carousel-image {
-    max-width: 25rem;
-    max-height: 35rem;
-    min-height: 35rem;
-    height: auto;
-    object-fit: contain;
-    margin:auto 2.5rem;
+
+.detailContainer{
+  /* background-color: brown; */
+  width: 80%;
+  height: 66vh;
+  margin-top: 2.5rem;
+}
+.item-title-container{ 
+  /* background-color: blue; */
+  width: 80%;
+  height: 16vh;
+  margin:0 auto;
+  padding: 2.5rem;
+  
+}
+.itemTitle{
+  font-size: 5rem;
+}
+.itemBrand{
+  font-size: 2.5rem;
 }
 
 .item-detail-container {
-    display: flex;
-    width: 80%;
-    height: 400px; /* Establece una altura fija para el contenedor principal */
-  }
-  
-  .carrusel {
-    flex: 1; /* El carrusel ocupará el espacio restante */
-  }
-  
-  .detalleProducto {
-    flex: 1;
-    padding: 1.5rem;
-    height: 100%; /* Establece una altura del 100% para que coincida con la altura del contenedor principal */
-    overflow: auto; /* Agrega desplazamiento si el contenido supera la altura del contenedor */
-  }
+  /* background-color: aqua; */
+  display: flex; 
+  width: 80%;
+  height: 50vh; /* Establece una altura fija para el contenedor principal */
+  margin:0 auto;
+}
+.carrusel {
+  width: 65%;
+  height: 90%;
+  margin: auto 0;
+  /* flex: 1; El carrusel ocupará el espacio restante */
+  /* background-color: blueviolet; */
+}
+.carousel-image {
+  width:100%;
+  height: 45vh; 
+  object-fit: cover;
+} 
+.detalleProducto {
+  width: 35%;
+  height: 100%; /* Establece una altura del 100% para que coincida con la altura del contenedor principal */
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* background-color:darkgoldenrod;   */
+}
+.descricionProducto{
+  height: 70%;
+  /* background-color: chartreuse; */
+  overflow: auto; /* Agrega desplazamiento si el contenido supera la altura del contenedor */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: italic;
+  font-size: 1.5rem;
+}
+.precioProducto{
+  height: 15%;
+  /* background-color:darksalmon;
+  display */: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.btnReservarContainer{
+  height: 15%;
+  /* background-color: chartreuse; */
+}
+.btnReservar{
+  background-color: var(--color-principal);
+  width: 15rem;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+}

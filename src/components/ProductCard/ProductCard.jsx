@@ -22,11 +22,11 @@ const ProductCard = ({item}) => {
       <Card className="h40rem">
         <img alt={item.title} src={item.thumbnail} className="imgTarjeta" />
         <CardBody>
-          <CardTitle tag="h5">{item.title}</CardTitle>
-          <CardSubtitle className="mb-2 text-muted" tag="h6">
+          <CardTitle tag="h2">{item.title}</CardTitle>
+          <CardSubtitle className="mb-2" tag="h6">
             {item.brand}
           </CardSubtitle>
-          <CardText>
+          <CardText className=" priceTag" >
             ${item.price}
           </CardText>
         </CardBody>
