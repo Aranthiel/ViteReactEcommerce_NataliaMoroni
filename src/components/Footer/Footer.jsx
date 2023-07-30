@@ -28,11 +28,11 @@ const Footer = () => {
                 <FontAwesomeIcon icon="fa-brands fa-instagram" />
                 </Link>
 
-                <Link className="btn btn-dark display-5 btn-floating m-1" to="www.Linkedin.com" >
+                <Link className="btn btn-dark display-5 btn-floating m-1" to="https://www.linkedin.com/in/nataliamoroni/" >
                 <FontAwesomeIcon icon="fa-brands fa-linkedin" />
                 </Link>
 
-                <Link className="btn btn-dark display-5 btn-floating m-1" to="www.Github.com">
+                <Link className="btn btn-dark display-5 btn-floating m-1" to="https://github.com/Aranthiel">
                 <FontAwesomeIcon icon="fa-brands fa-github" size="lg" />
                 </Link>
                 

@@ -7,7 +7,6 @@ import {
   CardTitle,
   CardSubtitle,
   CardText, 
-  Button
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
@@ -17,7 +16,7 @@ import "./ProductCard.css"
 
 const ProductCard = ({item, baseUrl}) => {  
   console.log(baseUrl , item.id)
- 
+  
   return (
     <Link to={`${baseUrl}/item/${item.id}`}>
       <Card className="pCard">
