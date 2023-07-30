@@ -15,10 +15,11 @@ import { Link } from 'react-router-dom';
 // estilos
 import "./ProductCard.css"
 
-const ProductCard = ({item}) => {
+const ProductCard = ({item, baseUrl}) => {  
+  console.log(baseUrl , item.id)
  
   return (
-    <Link to={`item/${item.id}`}>
+    <Link to={`${baseUrl}/item/${item.id}`}>
       <Card className="pCard">
         <img className="imgTarjeta" alt={item.title} src={item.thumbnail} />
         <CardBody className="cBody">

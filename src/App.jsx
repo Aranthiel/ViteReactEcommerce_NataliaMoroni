@@ -23,7 +23,7 @@ import SearchProducts from './components/SearchProducts/SearchProducts';
 //pages
 import HomePage from './pages/HomePage';
 import ContactPage from './pages/ContactPage';
-import AboutPage from './pages/AboutPage';
+import AboutPage from './pages/AboutPage/AboutPage';
 import ErrorPage from './pages/ErrorPage';
 import DetailPage from './pages/ProductDetailPage';
 import CartDetailPage from './pages/CartDetailPage/CartDetailPage';

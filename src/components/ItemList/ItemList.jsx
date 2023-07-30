@@ -11,11 +11,13 @@ const ItemList = (categoryId) => {
     const filteredProducts = categoryId.category
     ? items.filter(producto => producto.category === categoryId.category)
     : items;
+
+    const baseUrl = window.location.origin;
     
     return (
         <div className="cards-list margin05rem">
             {filteredProducts.map((producto)=>{ 
-                return (<ProductCard key={producto.id} item={producto} className="heigt40rem"/>)
+                return (<ProductCard key={producto.id} item={producto} baseUrl={baseUrl} className="heigt40rem"/>)
             })}
         </div>
     )}
