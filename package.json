@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage":"https://Aranthiel.github.io/ViteReactEcommerce_NataliaMoroni",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
